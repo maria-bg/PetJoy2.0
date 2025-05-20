@@ -115,14 +115,12 @@ public class MenuAtividades {
         int id = sc.nextInt();
         sc.nextLine();
 
-        // Primeiro remover os materiais utilizados
         String deleteMateriais = "DELETE FROM material_utilizado WHERE id_atividade = ?";
         try (PreparedStatement stmt = conn.prepareStatement(deleteMateriais)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
         }
 
-        // Depois remover a atividade
         String deleteAtividade = "DELETE FROM atividade WHERE id = ?";
         try (PreparedStatement stmt = conn.prepareStatement(deleteAtividade)) {
             stmt.setInt(1, id);
