@@ -20,12 +20,13 @@ PetJoy - Uma plataforma de gerenciamento de pets hospedados no hotel PetJoy. Rea
 Cenário de execução da aplicação com o docker-compose com as operações do CRUD    
 `docker-compose build`
 `docker-compose run --rm app`
-    
+`docker stop petjoy-app`
 
 Cenário de execução isolado para o container do banco de dados                
 - Indicar os comandos para a execução do container
 `docker compose up -d mysql`
 `docker exec -it petjoy-db mysql -u root -p`
+`docker stop petjoy-db`
 
 - Realizar ao menos duas operações do CRUD no container
 `USE petjoy;`
