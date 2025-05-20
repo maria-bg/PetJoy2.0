@@ -1,17 +1,41 @@
-## Getting Started
+# PetJoy
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Apresentação
+Aplicação Java que realize operações CRUD em um banco de dados MySQL utilizando o Docker Compose para o gerenciamento e a execução dos serviços.
+
+## A Equipe
+Ian Barros Nunes
+Letícia Lopes Moreira
+Maria Augusta Barreto de Gois
+
+## Requisitos
+
+### Contexto:           
+PetJoy - Uma plataforma de gerenciamento de pets hospedados no hotel PetJoy. Realiza operações de cadastrar os pets, lista-los, editar suas atividades e excluir hospedagens finalizadas.
+    
+### Tabelas do Banco de Dados:
+- Cliente, Pets, Materiais, Atividade, Material_Utilizado
+
+## Apresentação (durante a aula)
+Cenário de execução da aplicação com o docker-compose com as operações do CRUD    
+`docker-compose build`
+`docker-compose run --rm app`
+    
+
+Cenário de execução isolado para o container do banco de dados                
+- Indicar os comandos para a execução do container
+`docker compose up -d mysql`
+`docker exec -it petjoy-db mysql -u root -p`
+
+- Realizar ao menos duas operações do CRUD no container
+`USE petjoy;`
+`SELECT * FROM cliente`
+`INSERT INTO materiais VALUES (10, 'Sabonete');`
 
 ## Folder Structure
 
 The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
 ## Dependency Management
 
